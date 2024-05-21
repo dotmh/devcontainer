@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
+LABEL org.opencontainers.image.source https://github.com/dotmh/devcontainer
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update

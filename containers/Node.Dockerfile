@@ -1,4 +1,5 @@
-FROM dotmh/devcontainer:latest
+ARG base=devcontainer
+FROM dotmh/${base}:latest
 
 ARG EXTRA_NODE_VERSION=--lts
 
