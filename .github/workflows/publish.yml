@@ -16,8 +16,8 @@ jobs:
             - name: Build base container
               run: just build
             - name: Publish base container
-              run: just action-publish devcontainer latest ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+              run: just action-publish devcontainer ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
             - name: Build base cloud container
               run: just build
             - name: Publish base cloud container
-              run: just action-publish devcontainer-cloud latest ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+              run: just action-publish devcontainer-cloud ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
