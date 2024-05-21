@@ -1,0 +1,23 @@
+name: DotMH Publish Actions
+run-name: '${{ github.actor }} - ${{ github.workflow }} - ${{ github.run_number }}'
+on: [push]
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
+        steps:
+            - uses: actions/checkout@v4
+            - uses: extractions/setup-just@v1
+              with:
+                just-version: 1.5.0
+            - name: Build base container
+              run: just build
+            - name: Publish base container
+              run: just action-publish devcontainer latest ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+            - name: Build base cloud container
+              run: just build
+            - name: Publish base cloud container
+              run: just action-publish devcontainer-cloud latest ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
