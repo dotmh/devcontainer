@@ -8,18 +8,18 @@ version := `\cat .version`
 
 # Build a docker container
 build CONTAINER=devcontainer DOCKERFILE=default_dockerfile BASE=devcontainer:
-    docker build -f ./containers/{{DOCKERFILE}} . --tag {{namespace}}/{{CONTAINER}} --build-arg base={{BASE}}
+    docker build -f ./containers/{{DOCKERFILE}} . --tag {{namespace}}/{{CONTAINER}}:{{version}} --tag {{registry}}/{{namespace}}/{{CONTAINER}}:{{version}} --tag {{registry}}/{{namespace}}/{{CONTAINER}}:latest --build-arg base={{BASE}}
 
 # Runs a ZSH shell on a docker container
 run CONTAINER=devcontainer:
     docker run -it {{namespace}}/{{CONTAINER}} /bin/zsh
 
 # Publish a docker container to the registry
-publish CONTAINER=devcontainer: && _publish
+publish CONTAINER=devcontainer: && (_publish CONTAINER)
     echo $DOCKER_GIT_LOGIN | docker login {{registry}} --username {{namespace}} --password-stdin
 
 # Publish within a Github action to the registry
-action-publish CONTAINER USERNAME PASSWORD: && _publish
+action-publish CONTAINER USERNAME PASSWORD: && (_publish CONTAINER)
     docker login {{registry}} --username {{USERNAME}} --password {{PASSWORD}}
 
 # Show the version of the repo
@@ -45,5 +45,4 @@ bump-version-patch: version
     ./simver.bash bump patch {{version}} > {{version_file}}
 
 _publish CONTAINER=devcontainer:
-    docker tag {{namespace}}/{{CONTAINER}} {{registry}}/{{namespace}}/{{CONTAINER}}:{{version}}
-    docker push {{registry}}/{{namespace}}/{{CONTAINER}}:{{version}}
+    docker push -a {{registry}}/{{namespace}}/{{CONTAINER}}

@@ -1,4 +1,7 @@
-FROM dotmh/devcontainer:latest
+FROM ghcr.io/dotmh/devcontainer:1.0.0
+
+LABEL org.opencontainers.image.source https://github.com/dotmh/devcontainer
+LABEL org.opencontainers.image.licenses apache-2.0
 
 # Install Terraform
 RUN wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg

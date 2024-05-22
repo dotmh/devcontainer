@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 LABEL org.opencontainers.image.source https://github.com/dotmh/devcontainer
+LABEL org.opencontainers.image.licenses apache-2.0
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -17,7 +18,6 @@ RUN wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc |
 RUN echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
 RUN chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 RUN apt update && apt install -y eza
-# RUN apt install -y eza
 
 # Install BAT https://github.com/sharkdp/bat
 RUN apt -y install --no-install-recommends bat
