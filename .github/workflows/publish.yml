@@ -5,7 +5,7 @@ on:
     branches:
       - 'main'
     paths:
-      - **.Dockerfile
+      - '**.Dockerfile'
 
 jobs:
     publish-bases:
