@@ -20,8 +20,16 @@ publish CONTAINER=devcontainer: && (_publish CONTAINER)
     echo $DOCKER_GIT_LOGIN | docker login {{registry}} --username {{namespace}} --password-stdin
 
 # Publish within a Github action to the registry
-action-publish CONTAINER USERNAME PASSWORD: && (_publish CONTAINER)
+# action-publish CONTAINER USERNAME PASSWORD: && (_publish CONTAINER)
+#     docker login {{registry}} --username {{USERNAME}} --password {{PASSWORD}}
+
+# Publish within a Github action to the registry
+action-publish CONTAINER USERNAME PASSWORD : (action-login USERNAME PASSWORD) && (_publish CONTAINER)
+
+# Login to the registry within Github action to the registry
+action-login USERNAME PASSWORD:
     docker login {{registry}} --username {{USERNAME}} --password {{PASSWORD}}
+
 
 # Show the version of the repo
 version:
