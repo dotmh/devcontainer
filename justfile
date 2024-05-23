@@ -5,6 +5,7 @@ registry := "ghcr.io"
 latest := "latest"
 version_file := '.version'
 version := `\cat .version`
+reports := "./reports"
 
 # Build a docker container
 build CONTAINER=devcontainer DOCKERFILE=default_dockerfile BASE=devcontainer:
@@ -18,6 +19,11 @@ run CONTAINER=devcontainer:
 # Publish a docker container to the registry
 publish CONTAINER=devcontainer: && (_publish CONTAINER)
     echo $DOCKER_GIT_LOGIN | docker login {{registry}} --username {{namespace}} --password-stdin
+
+# Runs a Trivy scan on the container
+scan CONTAINER=devcontainer:
+    mkdir -p {{reports}}
+    which -s trivy && trivy image {{namespace}}/{{CONTAINER}} --output {{reports}}/{{CONTAINER}}-scan.log
 
 # Publish within a Github action to the registry
 # action-publish CONTAINER USERNAME PASSWORD: && (_publish CONTAINER)
@@ -37,20 +43,20 @@ version:
     @echo {{version}}
 
 # Set the current version to a new version
-set-version VERSION:
+version-set VERSION:
     ./simver.bash validate {{VERSION}}
     @echo {{VERSION}} > {{version_file}}
 
 # Bump the major simver version
-bump-version-major: version
+version-bump-major: version
     ./simver.bash bump major {{version}} > {{version_file}}
 
 # Bump the minor simver version
-bump-version-minor: version
+version-bump-minor: version
     ./simver.bash bump minor {{version}} > {{version_file}}
 
 # Bump the patch simver version
-bump-version-patch: version
+version-bump-patch: version
     ./simver.bash bump patch {{version}} > {{version_file}}
 
 _publish CONTAINER=devcontainer:
