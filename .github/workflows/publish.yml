@@ -38,7 +38,7 @@ jobs:
           container:
             - file: Go.Dockerfile
               container: go
-            - file: Node.Dockfile
+            - file: Node.Dockerfile
               container: node
           base:
             - devcontainer
