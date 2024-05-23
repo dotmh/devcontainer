@@ -48,7 +48,9 @@ jobs:
         - uses: extractions/setup-just@v1
           with:
             just-version: 1.5.0
+        - name: Login into the registry
+          run: just action-login ${{github.actor}} ${{secrets.GITHUB_TOKEN}}
         - name: Build base container
           run: just build ${{matrix.base}}-${{matrix.container.container}} ${{matrix.container.file}} ${{matrix.base}}
         - name: Publish base container
-          run: just action-publish ${{matrix.base}}-${{matrix.container.container}} ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+          run: just action-publish ${{matrix.base}}-${{matrix.container.container}} ${{github.actor}} ${{secrets.GITHUB_TOKEN}}
