@@ -12,7 +12,8 @@ build CONTAINER=devcontainer DOCKERFILE=default_dockerfile BASE=devcontainer:
 
 # Runs a ZSH shell on a docker container
 run CONTAINER=devcontainer:
-    docker run -it {{namespace}}/{{CONTAINER}} /bin/zsh
+    @echo "running {{CONTAINER}} version {{version}}"
+    docker run -it {{namespace}}/{{CONTAINER}}:{{version}} /bin/zsh
 
 # Publish a docker container to the registry
 publish CONTAINER=devcontainer: && (_publish CONTAINER)
@@ -25,12 +26,12 @@ action-publish CONTAINER USERNAME PASSWORD: && (_publish CONTAINER)
 # Show the version of the repo
 version:
     ./simver.bash validate {{version}}
-    echo {{version}}
+    @echo {{version}}
 
 # Set the current version to a new version
 set-version VERSION:
     ./simver.bash validate {{VERSION}}
-    echo {{VERSION}} > {{version_file}}
+    @echo {{VERSION}} > {{version_file}}
 
 # Bump the major simver version
 bump-version-major: version
