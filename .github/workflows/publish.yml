@@ -6,6 +6,7 @@ on:
       - 'main'
     paths:
       - '**.Dockerfile'
+      - 'devcontainers/**/**.json'
 
 jobs:
     publish-bases:
@@ -56,3 +57,18 @@ jobs:
           run: just build ${{matrix.base}}-${{matrix.container.container}} ${{matrix.container.file}} ${{matrix.base}}
         - name: Publish base container
           run: just action-publish ${{matrix.base}}-${{matrix.container.container}} ${{github.actor}} ${{secrets.GITHUB_TOKEN}}
+
+    publish-templates:
+      runs-on: ubuntu-latest
+      needs: publishes-dev-containers
+      steps:
+          - uses: actions/checkout@v4
+          - name: "Publish Templates"
+            uses: devcontainers/action@v1
+            with:
+              publish-templates: "true"
+              base-path-to-templates: "./devcontainers"
+              generate-docs: "true"
+
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

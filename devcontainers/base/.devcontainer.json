@@ -1,0 +1,4 @@
+{
+    "name" : "DotMH Core",
+    "image" : "ghcr.io/dotmh/devcontainer:1.0.0"
+}
