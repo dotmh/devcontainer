@@ -1,0 +1,20 @@
+{
+    "id" : "node",
+    "name" : "DotMH Node Dev Container",
+    "version" : "2.0.0",
+    "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
+    "description" : "The Node dev container for developing with Node and PNPM",
+    "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+    "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/node/README.md",
+    "options": {
+        "baseContainer" : {
+            "type" : "string",
+            "description" : "Whether or not you need cloud tools",
+            "proposals": ["devcontainer-node", "devcontainer-node-cloud"],
+            "default" : "devcontainer"
+        }
+    },
+    "platforms" : [ 
+        "Any"
+    ]
+}
