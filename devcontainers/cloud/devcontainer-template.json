@@ -1,0 +1,12 @@
+{
+    "id" : "cloud",
+    "name" : "DotMH Cloud Dev Container",
+    "version" : "2.0.0",
+    "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
+    "description" : "The cloud dev container for interacting with the cloud container image",
+    "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+    "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/cloud/README.md",
+    "platforms" : [ 
+        "Any"
+    ]
+}

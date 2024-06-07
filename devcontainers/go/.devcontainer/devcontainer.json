@@ -1,0 +1,6 @@
+{
+    "name" : "DotMH Go",
+    "build" : {
+        "dockerfile": "Dockerfile"
+    } 
+}

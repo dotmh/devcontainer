@@ -1,0 +1,6 @@
+{
+    "name" : "DotMH Node",
+    "build" : {
+        "dockerfile": "Dockerfile"
+    } 
+}
