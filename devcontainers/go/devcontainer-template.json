@@ -1,0 +1,20 @@
+{
+    "id" : "go",
+    "name" : "DotMH Go Dev Container",
+    "version" : "2.0.0",
+    "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
+    "description" : "The Go dev container for developing with Go",
+    "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+    "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/go/README.md",
+    "options": {
+        "baseContainer" : {
+            "type" : "string",
+            "description" : "Whether or not you need cloud tools",
+            "proposals": ["devcontainer-go", "devcontainer-go-cloud"],
+            "default" : "devcontainer-go"
+        }
+    },
+    "platforms" : [ 
+        "Any"
+    ]
+}
