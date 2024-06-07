@@ -7,6 +7,8 @@ on:
     paths:
       - '**.Dockerfile'
       - 'devcontainers/**/**.json'
+      - '.github/workflows/**.yml'
+      - '.version'
 
 jobs:
     publish-bases:
