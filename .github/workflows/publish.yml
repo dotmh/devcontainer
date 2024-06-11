@@ -30,6 +30,10 @@ jobs:
               run: just build devcontainer-cloud Cloud.Dockerfile
             - name: Publish base cloud container
               run: just action-publish devcontainer-cloud ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+            - name: Build Rocky Linux base
+              run: just build devcontainer-rocky-base Rocky.Dockerfile
+            - name: Publish Rocky Linux base
+              run: just action-publish devcontainer-rocky-base ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
 
     publishes-dev-containers:
       runs-on: ubuntu-latest
