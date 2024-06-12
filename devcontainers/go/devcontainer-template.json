@@ -9,8 +9,8 @@
     "options": {
         "baseContainer" : {
             "type" : "string",
-            "description" : "Whether or not you need cloud tools",
-            "proposals": ["devcontainer-go", "devcontainer-go-cloud"],
+            "description" : "Which base image to use",
+            "proposals": ["devcontainer-go", "devcontainer-cloud-go","devcontainer-rocky-go", "devcontainer-rocky-cloud-go"],
             "default" : "devcontainer-go"
         }
     },

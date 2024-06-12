@@ -17,7 +17,7 @@ run CONTAINER=devcontainer:
     docker run -it {{namespace}}/{{CONTAINER}}:{{version}} /bin/zsh
 
 # Publish a docker container to the registry
-publish CONTAINER=devcontainer: && (_publish CONTAINER)
+publish CONTAINER=devcontainer: mac-unlock && (_publish CONTAINER)
     echo $DOCKER_GIT_LOGIN | docker login {{registry}} --username {{namespace}} --password-stdin
 
 # Runs a Trivy scan on the container
@@ -58,6 +58,10 @@ version-bump-minor: version
 # Bump the patch simver version
 version-bump-patch: version
     ./simver.bash bump patch {{version}} > {{version_file}}
+
+# On MacOS __ONLY__ unlock the keychain, required for some docker interactions.
+mac-unlock:
+    security unlock-keychain || true
 
 _publish CONTAINER=devcontainer:
     docker push -a {{registry}}/{{namespace}}/{{CONTAINER}}

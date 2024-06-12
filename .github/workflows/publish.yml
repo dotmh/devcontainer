@@ -30,10 +30,32 @@ jobs:
               run: just build devcontainer-cloud Cloud.Dockerfile
             - name: Publish base cloud container
               run: just action-publish devcontainer-cloud ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+    
+    publish-rocky-bases:
+      runs-on: ubuntu-latest
+      permissions:
+          contents: read
+          packages: write
+          id-token: write
+      steps:
+          - uses: actions/checkout@v4
+          - uses: extractions/setup-just@v2
+            with:
+              just-version: 1.5.0        
+          - name: Build Rocky Linux base
+            run: just build devcontainer-rocky Rocky.Dockerfile
+          - name: Publish Rocky Linux base
+            run: just action-publish devcontainer-rocky ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+          - name: Build Rocky Linux Cloud
+            run: just build devcontainer-rocky-cloud Rocky.Cloud.Dockerfile
+          - name: Publish Rocky Linux Cloud
+            run: just action-publish devcontainer-rocky-cloud ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
 
     publishes-dev-containers:
       runs-on: ubuntu-latest
-      needs: publish-bases
+      needs: 
+        - publish-bases
+        - publish-rocky-bases
       permissions:
         contents: read
         packages: write
@@ -48,6 +70,8 @@ jobs:
           base:
             - devcontainer
             - devcontainer-cloud
+            - devcontainer-rocky
+            - devcontainer-rocky-cloud
       steps:
         - uses: actions/checkout@v4
         - uses: extractions/setup-just@v2

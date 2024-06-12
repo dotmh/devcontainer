@@ -1,0 +1,4 @@
+{
+    "name" : "DotMH Rocky Base",
+    "image" : "ghcr.io/dotmh/devcontainer-rocky-base:latest"
+}
