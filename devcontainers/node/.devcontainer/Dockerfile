@@ -1,1 +1,1 @@
-FROM ghcr.io/dotmh/${templateOption:baseContainer}:1.0.0
+FROM ghcr.io/dotmh/${templateOption:baseContainer}:latest
