@@ -9,8 +9,8 @@ RUN dnf -y update
 # Instal Development Tools (going to need these)
 RUN dnf -y group install "Development Tools"
 
-# Install wget
-RUN dnf -y install wget
+# Install some quailty of life utils
+RUN dnf -y install wget && dnf -y install unzip
 
 # Install RUST this is for EZA , BAT and Just
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
