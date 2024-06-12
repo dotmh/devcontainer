@@ -1,0 +1,12 @@
+{
+    "id" : "cloud",
+    "name" : "DotMH Rocky Linux Dev Container",
+    "version" : "2.0.0",
+    "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
+    "description" : "The base dev container for interacting with the base container image based on Rocky Linux",
+    "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+    "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/rocky-cloud/README.md",
+    "platforms" : [ 
+        "Any"
+    ]
+}
