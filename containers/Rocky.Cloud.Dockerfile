@@ -1,4 +1,4 @@
-FROM ghcr.io/dotmh/devcontainer-rocky-base:latest
+FROM ghcr.io/dotmh/devcontainer-rocky:latest
 
 LABEL org.opencontainers.image.source https://github.com/dotmh/devcontainer
 LABEL org.opencontainers.image.licenses apache-2.0
