@@ -12,24 +12,24 @@ on:
 
 jobs:
     publish-bases:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            packages: write
-            id-token: write
-        steps:
-            - uses: actions/checkout@v4
-            - uses: extractions/setup-just@v2
-              with:
-                just-version: 1.5.0
-            - name: Build base container
-              run: just build
-            - name: Publish base container
-              run: just action-publish devcontainer ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
-            - name: Build base cloud container
-              run: just build devcontainer-cloud Cloud.Dockerfile
-            - name: Publish base cloud container
-              run: just action-publish devcontainer-cloud ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+      runs-on: ubuntu-latest
+      permissions:
+          contents: read
+          packages: write
+          id-token: write
+      steps:
+          - uses: actions/checkout@v4
+          - uses: extractions/setup-just@v2
+            with:
+              just-version: 1.5.0
+          - name: Build base container
+            run: just build
+          - name: Publish base container
+            run: just action-publish devcontainer ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
+          - name: Build base cloud container
+            run: just build devcontainer-cloud Cloud.Dockerfile
+          - name: Publish base cloud container
+            run: just action-publish devcontainer-cloud ${{ github.actor }} ${{secrets.GITHUB_TOKEN}}
     
     publish-rocky-bases:
       runs-on: ubuntu-latest
