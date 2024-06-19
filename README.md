@@ -47,7 +47,7 @@ Adds AWS cloud tools to the Base images
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)
-![NVM](https://img.shields.io/badge/nvm-F4DD4B.svg?style=for-the-badge&logo=nvm)
+![NVM](https://img.shields.io/badge/nvm-F4DD4B.svg?style=for-the-badge&logo=nvm&logoColor=333333)
 
 For use with devloping applications on NodeJS can be built on top of any base
 
@@ -66,3 +66,10 @@ For use with devloping applications on GO can be built on top of any base
 ### Tools
 
 - [Go](https://go.dev/)
+
+# Devcontainer Templates
+
+- [Base](devcontainers/base/README.md)
+- [Cloud](devcontainers/cloud/README.md)
+- [Node](devcontainers/node/README.md)
+- [Go](devcontainers/go/README.md)

@@ -6,6 +6,14 @@
     "description" : "The base dev container for interacting with the base container image",
     "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
     "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/base/README.md",
+    "options": {
+        "baseContainer" : {
+            "type" : "string",
+            "description" : "Which base image to use",
+            "proposals": ["devcontainer", "devcontainer-rocky"],
+            "default" : "devcontainer"
+        }
+    },
     "platforms" : [ 
         "Any"
     ]

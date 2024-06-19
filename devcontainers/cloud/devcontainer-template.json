@@ -6,6 +6,14 @@
     "description" : "The cloud dev container for interacting with the cloud container image",
     "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
     "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/cloud/README.md",
+    "options": {
+        "baseContainer" : {
+            "type" : "string",
+            "description" : "Which base image to use",
+            "proposals": ["devcontainer-cloud", "devcontainer-rocky-cloud"],
+            "default" : "devcontainer-cloud"
+        }
+    },
     "platforms" : [ 
         "Any"
     ]
