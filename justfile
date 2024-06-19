@@ -16,26 +16,20 @@ run CONTAINER=devcontainer:
     @echo "running {{CONTAINER}} version {{version}}"
     docker run -it {{namespace}}/{{CONTAINER}}:{{version}} /bin/zsh
 
-# Publish a docker container to the registry
-publish CONTAINER=devcontainer: mac-unlock && (_publish CONTAINER)
-    echo $DOCKER_GIT_LOGIN | docker login {{registry}} --username {{namespace}} --password-stdin
-
 # Runs a Trivy scan on the container
 scan CONTAINER=devcontainer:
     mkdir -p {{reports}}
     which -s trivy && trivy image {{namespace}}/{{CONTAINER}} --output {{reports}}/{{CONTAINER}}-scan.log
 
-# Publish within a Github action to the registry
-# action-publish CONTAINER USERNAME PASSWORD: && (_publish CONTAINER)
-#     docker login {{registry}} --username {{USERNAME}} --password {{PASSWORD}}
+# Publish a docker container to the registry
+publish USERNAME CONTAINER=devcontainer: mac-unlock (login USERNAME) && (_publish CONTAINER)
 
 # Publish within a Github action to the registry
-action-publish CONTAINER USERNAME PASSWORD : (action-login USERNAME PASSWORD) && (_publish CONTAINER)
+action-publish CONTAINER USERNAME : (login USERNAME) && (_publish CONTAINER)
 
 # Login to the registry within Github action to the registry
-action-login USERNAME PASSWORD:
-    docker login {{registry}} --username {{USERNAME}} --password {{PASSWORD}}
-
+login USERNAME:
+    echo $DOCKER_GIT_LOGIN | docker login {{registry}} --username {{USERNAME}} --password-stdin
 
 # Show the version of the repo
 version:
