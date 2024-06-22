@@ -37,20 +37,20 @@ version:
     @echo {{version}}
 
 # Set the current version to a new version
-version-set VERSION:
+version-set VERSION: && (_setTemplatesVersion)
     ./simver.bash validate {{VERSION}}
     @echo {{VERSION}} > {{version_file}}
 
 # Bump the major simver version
-version-bump-major: version
+version-bump-major: version && (_setTemplatesVersion)
     ./simver.bash bump major {{version}} > {{version_file}}
 
 # Bump the minor simver version
-version-bump-minor: version
+version-bump-minor: version && (_setTemplatesVersion)
     ./simver.bash bump minor {{version}} > {{version_file}}
 
 # Bump the patch simver version
-version-bump-patch: version
+version-bump-patch: version && (_setTemplatesVersion)
     ./simver.bash bump patch {{version}} > {{version_file}}
 
 # On MacOS __ONLY__ unlock the keychain, required for some docker interactions.
@@ -59,3 +59,6 @@ mac-unlock:
 
 _publish CONTAINER=devcontainer:
     docker push -a {{registry}}/{{namespace}}/{{CONTAINER}}
+
+_setTemplatesVersion:
+    find . -name 'devcontainer-template.json' -type f -exec sed -i '' -e 's/[0-9]\.[0-9]\.[0-9]/{{`\cat .version`}}/g' {} \;
