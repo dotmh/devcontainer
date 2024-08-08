@@ -1,7 +1,7 @@
 {
     "id" : "node",
     "name" : "DotMH Node Dev Container",
-    "version" : "4.0.0",
+    "version" : "5.0.0",
     "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
     "description" : "The Node dev container for developing with Node and PNPM",
     "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
