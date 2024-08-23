@@ -1,7 +1,8 @@
 ![DotMH](https://github.com/dotmh/dotmh/raw/master/logo.png)
 
 # DotMH Devcontainers
-A standard DotMH Dev Containers templates build on custom Docker Images, for use in DotMH projects. 
+
+A standard DotMH Dev Containers templates build on custom Docker Images, for use in DotMH projects.
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-%23FE5196?style=for-the-badge&logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
@@ -15,6 +16,7 @@ A standard DotMH Dev Containers templates build on custom Docker Images, for use
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 ## Base
+
 Choose the base Image to build on top off
 
 ![Static Badge](https://img.shields.io/badge/Rocky_Linux-10B981?style=for-the-badge&logo=rockylinux&logoColor=%23FFFFFF)
@@ -61,11 +63,23 @@ For use with devloping applications on NodeJS can be built on top of any base
 
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 
-For use with devloping applications on GO can be built on top of any base
+For use with developing applications on GO can be built on top of any base
 
 ### Tools
 
 - [Go](https://go.dev/)
+
+## Kotlin
+
+![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+
+For use with developing applications on Kotlin can be built on top of any base
+
+### Tools
+
+- [SDKMAN](https://sdkman.io/)
+- [Kotlin](https://kotlinlang.org/)
+- [KScript](https://github.com/kscripting/kscript)
 
 # Devcontainer Templates
 
@@ -73,3 +87,4 @@ For use with devloping applications on GO can be built on top of any base
 - [Cloud](devcontainers/cloud/README.md)
 - [Node](devcontainers/node/README.md)
 - [Go](devcontainers/go/README.md)
+- [Kotlin](devcontainers/kotlin/README.md)

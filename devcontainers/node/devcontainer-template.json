@@ -1,20 +1,23 @@
 {
-    "id" : "node",
-    "name" : "DotMH Node Dev Container",
-    "version" : "5.0.0",
-    "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
-    "description" : "The Node dev container for developing with Node and PNPM",
-    "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
-    "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/node/README.md",
-    "options": {
-        "baseContainer" : {
-            "type" : "string",
-            "description" : "Which base image to use",
-            "proposals": ["devcontainer-node", "devcontainer-cloud-node", "devcontainer-rocky-node", "devcontainer-rocky-cloud-node"],
-            "default" : "devcontainer-node"
-        }
-    },
-    "platforms" : [ 
-        "Any"
-    ]
+  "id": "node",
+  "name": "DotMH Node Dev Container",
+  "version": "5.0.0",
+  "publisher": "DotMH <oss+devcontainer@dotmh.io>",
+  "description": "The Node dev container for developing with Node and PNPM",
+  "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+  "documentationURL": "https://github.com/dotmh/devcontainer/blob/main/devcontainers/node/README.md",
+  "options": {
+    "baseContainer": {
+      "type": "string",
+      "description": "Which base image to use",
+      "proposals": [
+        "devcontainer-node",
+        "devcontainer-cloud-node",
+        "devcontainer-rocky-node",
+        "devcontainer-rocky-cloud-node"
+      ],
+      "default": "devcontainer-node"
+    }
+  },
+  "platforms": ["Any"]
 }
