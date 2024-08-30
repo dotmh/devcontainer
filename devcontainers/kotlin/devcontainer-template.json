@@ -1,0 +1,23 @@
+{
+  "id": "kotlin",
+  "name": "DotMH Kotlin Dev Container",
+  "version": "6.0.0",
+  "publisher": "DotMH <oss+devcontainer@dotmh.io>",
+  "description": "The Kotlin dev container for developing with Kotlin",
+  "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+  "documentationURL": "https://github.com/dotmh/devcontainer/blob/main/devcontainers/Kotlin/README.md",
+  "options": {
+    "baseContainer": {
+      "type": "string",
+      "description": "Which base image to use",
+      "proposals": [
+        "devcontainer-Kotlin",
+        "devcontainer-cloud-Kotlin",
+        "devcontainer-rocky-Kotlin",
+        "devcontainer-rocky-cloud-Kotlin"
+      ],
+      "default": "devcontainer-Kotlin"
+    }
+  },
+  "platforms": ["Any"]
+}

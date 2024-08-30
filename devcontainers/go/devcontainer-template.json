@@ -1,20 +1,23 @@
 {
-    "id" : "go",
-    "name" : "DotMH Go Dev Container",
-    "version" : "5.0.0",
-    "publisher" : "DotMH <oss+devcontainer@dotmh.io>",
-    "description" : "The Go dev container for developing with Go",
-    "licenseURL" : "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
-    "documentationURL" : "https://github.com/dotmh/devcontainer/blob/main/devcontainers/go/README.md",
-    "options": {
-        "baseContainer" : {
-            "type" : "string",
-            "description" : "Which base image to use",
-            "proposals": ["devcontainer-go", "devcontainer-cloud-go","devcontainer-rocky-go", "devcontainer-rocky-cloud-go"],
-            "default" : "devcontainer-go"
-        }
-    },
-    "platforms" : [ 
-        "Any"
-    ]
+  "id": "go",
+  "name": "DotMH Go Dev Container",
+  "version": "6.0.0",
+  "publisher": "DotMH <oss+devcontainer@dotmh.io>",
+  "description": "The Go dev container for developing with Go",
+  "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+  "documentationURL": "https://github.com/dotmh/devcontainer/blob/main/devcontainers/go/README.md",
+  "options": {
+    "baseContainer": {
+      "type": "string",
+      "description": "Which base image to use",
+      "proposals": [
+        "devcontainer-go",
+        "devcontainer-cloud-go",
+        "devcontainer-rocky-go",
+        "devcontainer-rocky-cloud-go"
+      ],
+      "default": "devcontainer-go"
+    }
+  },
+  "platforms": ["Any"]
 }

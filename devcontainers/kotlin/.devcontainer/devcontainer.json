@@ -1,0 +1,17 @@
+{
+    "name": "DotMH Kotlin",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker",
+                "mathiasfrohlich.Kotlin",
+                "github.vscode-github-actions",
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    }
+}

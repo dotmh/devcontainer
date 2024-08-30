@@ -76,6 +76,8 @@ jobs:
               container: go
             - file: Node.Dockerfile
               container: node
+            - file: Kotlin.Dockerfile
+              container: kotlin
           base:
             - devcontainer
             - devcontainer-cloud
