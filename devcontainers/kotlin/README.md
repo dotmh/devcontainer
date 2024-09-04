@@ -24,8 +24,10 @@ A Devcontainer for use with Kotlin development, optionally with tools for workin
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
+- [Digital Ocean CLI](https://docs.digitalocean.com/reference/doctl/)
 - [Terraform](https://www.terraform.io/)
 
 ## Visual Studio Extentions
