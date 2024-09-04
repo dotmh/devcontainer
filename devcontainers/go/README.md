@@ -20,12 +20,14 @@ A Devcontainer for use with Go development, optionally with tools for working wi
 - [PNPM](https://pnpm.io/)
 - [NVM \[Node Version Manager\]](https://github.com/nvm-sh/nvm)
 
-### When Using Cloud containers as the base 
+### When Using Cloud containers as the base
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
+- [Digital Ocean CLI](https://docs.digitalocean.com/reference/doctl/)
 - [Terraform](https://www.terraform.io/)
 
 ## Visual Studio Extentions
@@ -35,8 +37,6 @@ A Devcontainer for use with Go development, optionally with tools for working wi
 When using this devcontainer under [Visual Studio Code (vscode)](https://code.visualstudio.com/) with the
 [Devcontainer Extention](https://containers.dev/supporting#visual-studio-code), vscode will automatically install
 the following extentions
-
-
 
 - [A Spellchecker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
@@ -60,7 +60,7 @@ devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/go -a '{"baseCon
 #### Options
 
 - `baseContainer` :
-    - `devcontainer` _DEFAULT_ - the ubuntu base container
-    - `devcontainer-rocky` - the rocky linux base container
-    - `devcontainer-cloud`- the ubuntu base container with cloud tools
-    - `devcontainer-rocky-cloud` - the rocky linux base container with cloud tools
+  - `devcontainer` _DEFAULT_ - the ubuntu base container
+  - `devcontainer-rocky` - the rocky linux base container
+  - `devcontainer-cloud`- the ubuntu base container with cloud tools
+  - `devcontainer-rocky-cloud` - the rocky linux base container with cloud tools
