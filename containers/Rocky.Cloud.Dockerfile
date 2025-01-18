@@ -7,7 +7,7 @@ ARG digitalocean_cli_version=1.110.0
 
 # Install Terraform
 RUN dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo &&\
-    dnf -y install terraform
+    dnf -y install terraform && dnf -y install packer
 
 # Install AWS 
 RUN dnf -y install unzip &&\

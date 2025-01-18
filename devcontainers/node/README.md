@@ -25,12 +25,14 @@ A Devcontainer for use with NodeJS development, optionally with tools for workin
 ### When Using Cloud containers as the base
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Packer](https://img.shields.io/badge/packer-%23E7EEF0.svg?style=for-the-badge&logo=packer&logoColor=%2302A8EF)
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 - [Digital Ocean CLI](https://docs.digitalocean.com/reference/doctl/)
 - [Terraform](https://www.terraform.io/)
+- [Packer](https://www.packer.io/)
 
 ## Visual Studio Extentions
 

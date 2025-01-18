@@ -35,17 +35,19 @@ Choose the base Image to build on top off
 
 ## Cloud
 
-Adds AWS cloud tools to the Base images
+Adds cloud tools to the Base images
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Packer](https://img.shields.io/badge/packer-%23E7EEF0.svg?style=for-the-badge&logo=packer&logoColor=%2302A8EF)
 
 ### Tools
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
-- [Terraform](https://www.terraform.io/)
 - [Digital Ocean CLI](https://docs.digitalocean.com/reference/doctl/)
+- [Terraform](https://www.terraform.io/)
+- [Packer](https://www.packer.io/)
 
 ## Node
 
