@@ -5,8 +5,9 @@ A very simply base template it is just the OS ether Ubuntu or Rocky Linux with s
 ![Static Badge](https://img.shields.io/badge/Rocky_Linux-10B981?style=for-the-badge&logo=rockylinux&logoColor=%23FFFFFF)
 ![Static Badge](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=%23FFFFFF)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Packer](https://img.shields.io/badge/packer-%23E7EEF0.svg?style=for-the-badge&logo=packer&logoColor=%2302A8EF)
 
 - [Rocky Linux](https://rockylinux.org/)
 - [Ubuntu](https://ubuntu.com/)
@@ -21,6 +22,7 @@ A very simply base template it is just the OS ether Ubuntu or Rocky Linux with s
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 - [Digital Ocean CLI](https://docs.digitalocean.com/reference/doctl/)
 - [Terraform](https://www.terraform.io/)
+- [Packer](https://www.packer.io/)
 
 ## Usage
 
