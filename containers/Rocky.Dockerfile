@@ -21,8 +21,14 @@ RUN dnf -y install util-linux-user &&\
 # Install Oh My ZSH
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+RUN dnf -y install wget
+
 # Install EZA https://github.com/eza-community/eza
-RUN dnf -y install eza
+# RUN dnf -y install eza
+RUN wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz &&\
+    chmod +x eza &&\
+    chown root:root eza &&\
+    mv eza /usr/local/bin/eza
 
 # Install BAT https://github.com/sharkdp/bat
 RUN dnf -y install bat
