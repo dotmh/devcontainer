@@ -114,8 +114,9 @@ jobs:
           - name: "Publish Templates"
             uses: devcontainers/action@v1
             with:
-              publish-templates: "true"
+              publish-templates: true
               base-path-to-templates: "./devcontainers"
-              generate-docs: "true"
+              generate-docs: true
+              disable-repo-tagging: true
             env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
