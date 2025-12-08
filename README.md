@@ -102,4 +102,4 @@ For use when developing applications on the .net framework, can be built on top 
 - [Node](devcontainers/node/README.md)
 - [Go](devcontainers/go/README.md)
 - [Kotlin](devcontainers/kotlin/README.md)
-- [C#](devcontainers/c-sharp/README.md)
+- [C#](devcontainers/csharp/README.md)
