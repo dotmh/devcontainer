@@ -1,7 +1,7 @@
 {
   "id": "kotlin",
   "name": "DotMH Kotlin Dev Container",
-  "version": "9.2.0",
+  "version": "9.2.1",
   "publisher": "DotMH <oss+devcontainer@dotmh.io>",
   "description": "The Kotlin dev container for developing with Kotlin",
   "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
