@@ -19,9 +19,9 @@ jobs:
           id-token: write
       steps:
           - uses: actions/checkout@v4
-          - uses: extractions/setup-just@v2
+          - uses: extractions/setup-just@v3
             with:
-              just-version: 1.5.0
+              just-version: 1.42.4
           - name: Build base container
             run: just build
           - name: Publish base container
@@ -43,9 +43,9 @@ jobs:
           id-token: write
       steps:
           - uses: actions/checkout@v4
-          - uses: extractions/setup-just@v2
+          - uses: extractions/setup-just@v3
             with:
-              just-version: 1.5.0        
+              just-version: 1.42.4       
           - name: Build Rocky Linux base
             run: just build devcontainer-rocky Rocky.Dockerfile
           - name: Publish Rocky Linux base
@@ -85,7 +85,7 @@ jobs:
             - devcontainer-rocky-cloud
       steps:
         - uses: actions/checkout@v4
-        - uses: extractions/setup-just@v2
+        - uses: extractions/setup-just@v3
           with:
             just-version: 1.42.4
         - name: Login into the registry
