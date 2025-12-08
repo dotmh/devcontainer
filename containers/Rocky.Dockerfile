@@ -35,3 +35,11 @@ RUN dnf -y install bat
 
 # Install Just https://github.com/casey/just
 RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin
+
+# Update zshrc automatically
+SHELL ["zsh", "-c"]
+RUN cat <<EOL >> $HOME/.zshrc
+echo "Starting ....."
+alias cat="bat -P"
+alias ls="eza"
+EOL
