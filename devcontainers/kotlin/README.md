@@ -53,13 +53,13 @@ the following extentions
 ### Example
 
 ```bash
-devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/kotlin -a '{"baseContainer":"devcontainer"}`
+devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/kotlin -a '{"baseContainer":"devcontainer-kotlin"}`
 ```
 
 #### Options
 
 - `baseContainer` :
-  - `devcontainer` _DEFAULT_ - the ubuntu base container
-  - `devcontainer-rocky` - the rocky linux base container
-  - `devcontainer-cloud`- the ubuntu base container with cloud tools
-  - `devcontainer-rocky-cloud` - the rocky linux base container with cloud tools
+  - `devcontainer-kotlin` _DEFAULT_ - the ubuntu base container
+  - `devcontainer-rocky-kotlin` - the rocky linux base container
+  - `devcontainer-cloud-kotlin`- the ubuntu base container with cloud tools
+  - `devcontainer-rocky-cloud-kotlin` - the rocky linux base container with cloud tools

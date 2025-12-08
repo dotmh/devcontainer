@@ -16,9 +16,7 @@ A Devcontainer for use with Go development, optionally with tools for working wi
 - [BAT](https://github.com/sharkdp/bat) - A better Cat command
 - [EZA](https://github.com/eza-community/eza) - A better ls command
 - [Just](https://github.com/casey/just) - An awesome task runner
-- [NodeJS](https://nodejs.org/en)
-- [PNPM](https://pnpm.io/)
-- [NVM \[Node Version Manager\]](https://github.com/nvm-sh/nvm)
+- [Go](https://go.dev/) - The GO tool chain
 
 ### When Using Cloud containers as the base
 
@@ -60,7 +58,7 @@ devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/go -a '{"baseCon
 #### Options
 
 - `baseContainer` :
-  - `devcontainer` _DEFAULT_ - the ubuntu base container
-  - `devcontainer-rocky` - the rocky linux base container
-  - `devcontainer-cloud`- the ubuntu base container with cloud tools
-  - `devcontainer-rocky-cloud` - the rocky linux base container with cloud tools
+  - `devcontainer-go` _DEFAULT_ - the ubuntu base container
+  - `devcontainer-rocky-go` - the rocky linux base container
+  - `devcontainer-cloud-go`- the ubuntu base container with cloud tools
+  - `devcontainer-rocky-cloud-go` - the rocky linux base container with cloud tools

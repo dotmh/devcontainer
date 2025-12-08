@@ -72,7 +72,7 @@ devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/node -a '{"baseC
 #### Options
 
 - `baseContainer` :
-  - `devcontainer` _DEFAULT_ - the ubuntu base container
-  - `devcontainer-rocky` - the rocky linux base container
-  - `devcontainer-cloud`- the ubuntu base container with cloud tools
-  - `devcontainer-rocky-cloud` - the rocky linux base container with cloud tools
+  - `devcontainer-node` _DEFAULT_ - the ubuntu base container
+  - `devcontainer-rocky-node` - the rocky linux base container
+  - `devcontainer-cloud-node`- the ubuntu base container with cloud tools
+  - `devcontainer-rocky-cloud-node` - the rocky linux base container with cloud tools
