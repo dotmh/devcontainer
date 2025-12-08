@@ -78,6 +78,9 @@ jobs:
               container: node
             - file: Kotlin.Dockerfile
               container: kotlin
+            - file: Dotnet.Dockerfile
+              container: dotnet
+              
           base:
             - devcontainer
             - devcontainer-cloud
