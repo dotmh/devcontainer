@@ -1,7 +1,7 @@
 {
   "id": "csharp",
   "name": "DotMH C# Dev Container",
-  "version": "9.2.0",
+  "version": "9.2.1",
   "publisher": "DotMH <oss+devcontainer@dotmh.io>",
   "description": "The Go dev container for developing with C#",
   "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
