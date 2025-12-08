@@ -1,10 +1,11 @@
-# DotMH Dev Container - Kotlin
+# DotMH Dev Container - C#
 
-A Devcontainer for use with Kotlin development, optionally with tools for working with AWS
+A Devcontainer for use with C# development, optionally with tools for working with AWS
 
 ![Static Badge](https://img.shields.io/badge/Rocky_Linux-10B981?style=for-the-badge&logo=rockylinux&logoColor=%23FFFFFF)
 ![Static Badge](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=%23FFFFFF)
-![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
 
 - [Rocky Linux](https://rockylinux.org/)
 - [Ubuntu](https://ubuntu.com/)
@@ -16,9 +17,7 @@ A Devcontainer for use with Kotlin development, optionally with tools for workin
 - [BAT](https://github.com/sharkdp/bat) - A better Cat command
 - [EZA](https://github.com/eza-community/eza) - A better ls command
 - [Just](https://github.com/casey/just) - An awesome task runner
-- [SDKMAN](https://sdkman.io/) - A tool for managing SDKs
-- [Kotlin](https://kotlinlang.org/)
-- [KScript](https://github.com/kscripting/kscript)
+- [.net](https://dotnet.microsoft.com/en-us/download) - The dotnet CLI Toolchain
 
 ### When Using Cloud containers as the base
 
@@ -39,7 +38,9 @@ When using this devcontainer under [Visual Studio Code (vscode)](https://code.vi
 the following extentions
 
 - [A Spellchecker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-- [Kotlin Language](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin)
+- [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
+- [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+- [.NET MAUI](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
 - [Github Actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)
 - [Copilot](https://marketplace.visualstudio.com/items?itemName=github.copilot)
 - [Copilot Chat](https://marketplace.visualstudio.com/items?itemName=github.copilot-chat)
@@ -53,13 +54,13 @@ the following extentions
 ### Example
 
 ```bash
-devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/kotlin -a '{"baseContainer":"devcontainer-kotlin"}`
+devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/csharp -a '{"baseContainer":"devcontainer-dotnet"}`
 ```
 
 #### Options
 
 - `baseContainer` :
-  - `devcontainer-kotlin` _DEFAULT_ - the ubuntu base container
-  - `devcontainer-rocky-kotlin` - the rocky linux base container
-  - `devcontainer-cloud-kotlin`- the ubuntu base container with cloud tools
-  - `devcontainer-rocky-cloud-kotlin` - the rocky linux base container with cloud tools
+  - `devcontainer-dotnet` _DEFAULT_ - the ubuntu base container
+  - `devcontainer-rocky-dotnet` - the rocky linux base container
+  - `devcontainer-cloud-dotnet`- the ubuntu base container with cloud tools
+  - `devcontainer-rocky-cloud-dotnet` - the rocky linux base container with cloud tools

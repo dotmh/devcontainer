@@ -85,6 +85,16 @@ For use with developing applications on Kotlin can be built on top of any base
 - [Kotlin](https://kotlinlang.org/)
 - [KScript](https://github.com/kscripting/kscript)
 
+## DotNet
+
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+
+For use when developing applications on the .net framework, can be built on top of any base
+
+### Tools
+
+- [.net](https://dotnet.microsoft.com/en-us/download)
+
 # Devcontainer Templates
 
 - [Base](devcontainers/base/README.md)
@@ -92,3 +102,4 @@ For use with developing applications on Kotlin can be built on top of any base
 - [Node](devcontainers/node/README.md)
 - [Go](devcontainers/go/README.md)
 - [Kotlin](devcontainers/kotlin/README.md)
+- [C#](devcontainers/c-sharp/README.md)
