@@ -107,7 +107,7 @@ For use when developing applications on the .net framework, can be built on top 
 
 ## Rust
 
-> [!INFO]
+> [!IMPORTANT]
 > Experimental
 
 ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
