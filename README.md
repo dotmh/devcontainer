@@ -95,6 +95,18 @@ For use when developing applications on the .net framework, can be built on top 
 
 - [.net](https://dotnet.microsoft.com/en-us/download)
 
+## Rust
+
+![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
+
+For use when developing applications on Rust, can be built on top of any base
+
+### Tools
+
+- [Rustup](https://rust-lang.org/tools/install/)
+    - [RustC](https://doc.rust-lang.org/rustc/index.html)
+    - [Cargo](https://doc.rust-lang.org/cargo/index.html)
+
 # Devcontainer Templates
 
 - [Base](devcontainers/base/README.md)
@@ -103,3 +115,4 @@ For use when developing applications on the .net framework, can be built on top 
 - [Go](devcontainers/go/README.md)
 - [Kotlin](devcontainers/kotlin/README.md)
 - [C#](devcontainers/csharp/README.md)
+- [Rust](devcontainers/rust/README.md)
