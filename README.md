@@ -15,6 +15,10 @@ A standard DotMH Dev Containers templates build on custom Docker Images, for use
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
+Containers marked as **deprecated** will not receive updates as of the time of there deprecation. These are normally languages that I am currently not developing in, so I am not regularly [dog fooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) them.
+
+Containers marked as **Experimental** are ones where I am new ot the language and toolchain and just want to get something up and running as a starting point.
+
 ## Base
 
 Choose the base Image to build on top off
@@ -65,6 +69,9 @@ For use with devloping applications on NodeJS can be built on top of any base
 
 ## Go
 
+> [!WARNING]
+> Deprecated (2025-12-27)
+
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 
 For use with developing applications on GO can be built on top of any base
@@ -74,6 +81,9 @@ For use with developing applications on GO can be built on top of any base
 - [Go](https://go.dev/)
 
 ## Kotlin
+
+> [!WARNING]
+> Deprecated (2025-12-27)
 
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 
@@ -96,6 +106,9 @@ For use when developing applications on the .net framework, can be built on top 
 - [.net](https://dotnet.microsoft.com/en-us/download)
 
 ## Rust
+
+> [!INFO]
+> Experimental
 
 ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
 
