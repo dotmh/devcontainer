@@ -1,0 +1,23 @@
+{
+  "id": "node",
+  "name": "DotMH Rust Dev Container",
+  "version": "9.2.2",
+  "publisher": "DotMH <oss+devcontainer@dotmh.io>",
+  "description": "The Rust dev container for developing with Rustup, Rust and Cargo",
+  "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+  "documentationURL": "https://github.com/dotmh/devcontainer/blob/main/devcontainers/rust/README.md",
+  "options": {
+    "baseContainer": {
+      "type": "string",
+      "description": "Which base image to use",
+      "proposals": [
+        "devcontainer-rust",
+        "devcontainer-cloud-rust",
+        "devcontainer-rocky-rust",
+        "devcontainer-rocky-cloud-rust"
+      ],
+      "default": "devcontainer-rust"
+    }
+  },
+  "platforms": ["Any"]
+}
