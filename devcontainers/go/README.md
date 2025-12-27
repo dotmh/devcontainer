@@ -1,5 +1,8 @@
 # DotMH Dev Container - Go
 
+> [!WARNING]
+> Deprecated
+
 A Devcontainer for use with Go development, optionally with tools for working with AWS
 
 ![Static Badge](https://img.shields.io/badge/Rocky_Linux-10B981?style=for-the-badge&logo=rockylinux&logoColor=%23FFFFFF)
