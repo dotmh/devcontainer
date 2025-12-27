@@ -85,4 +85,4 @@ _publish CONTAINER=devcontainer:
     docker push -a {{registry}}/{{namespace}}/{{CONTAINER}}
 
 _setTemplatesVersion:
-    find . -name 'devcontainer-template.json' -type f -exec sed -i '' -e 's/[0-9]\.[0-9]\.[0-9]/{{`\cat .version`}}/g' {} \;
+    find . -name 'devcontainer-template.json' -type f -exec sed -i -E -e 's/[0-9]+\.[0-9]+\.[0-9]+/{{`\cat .version`}}/g' {} \;
