@@ -80,7 +80,8 @@ jobs:
               container: kotlin
             - file: Dotnet.Dockerfile
               container: dotnet
-              
+            - file: Rust.Dockerfile
+              container: rust
           base:
             - devcontainer
             - devcontainer-cloud
