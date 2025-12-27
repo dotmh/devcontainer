@@ -1,4 +1,4 @@
-FROM rockylinux:9.3
+FROM rockylinux/rockylinux:10.1
 
 LABEL dev.containers.features="common"
 LABEL org.opencontainers.image.source=https://github.com/dotmh/devcontainer
