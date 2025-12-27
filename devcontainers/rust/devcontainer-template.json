@@ -1,7 +1,7 @@
 {
   "id": "rust",
   "name": "DotMH Rust Dev Container",
-  "version": "11.0.0",
+  "version": "11.0.1",
   "publisher": "DotMH <oss+devcontainer@dotmh.io>",
   "description": "The Rust dev container for developing with Rustup, Rust and Cargo",
   "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
