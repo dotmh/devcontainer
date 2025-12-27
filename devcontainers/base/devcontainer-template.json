@@ -1,7 +1,7 @@
 {
   "id": "base",
   "name": "DotMH Base Dev Container",
-  "version": "10.0.1",
+  "version": "10.1.0",
   "publisher": "DotMH <oss+devcontainer@dotmh.io>",
   "description": "The base dev container for interacting with the base container image",
   "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
