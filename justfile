@@ -6,11 +6,16 @@ latest := "latest"
 version_file := '.version'
 version := `\cat .version`
 reports := "./reports"
+trivyError := "Please make sure Trivy is installed and in your path, see https://trivy.dev/docs/latest/getting-started/"
 
 # Build a docker container
 [group("Builds")]
 build CONTAINER=devcontainer DOCKERFILE=default_dockerfile BASE=devcontainer:
-    docker build -f ./containers/{{DOCKERFILE}} . --tag {{namespace}}/{{CONTAINER}}:{{version}} --tag {{registry}}/{{namespace}}/{{CONTAINER}}:{{version}} --tag {{registry}}/{{namespace}}/{{CONTAINER}}:latest --build-arg base={{BASE}}
+    docker build -f ./containers/{{DOCKERFILE}} . \
+        --tag {{namespace}}/{{CONTAINER}}:{{version}} \
+        --tag {{registry}}/{{namespace}}/{{CONTAINER}}:{{version}} \
+        --tag {{registry}}/{{namespace}}/{{CONTAINER}}:latest \
+        --build-arg base={{BASE}}
 
 # Runs a ZSH shell on a docker container
 [group("Run")]
@@ -22,7 +27,8 @@ run CONTAINER=devcontainer:
 [group("Run")]
 scan CONTAINER=devcontainer:
     mkdir -p {{reports}}
-    which -s trivy && trivy image {{namespace}}/{{CONTAINER}} --output {{reports}}/{{CONTAINER}}-scan.log
+    command -v trivy >/dev/null 2>&1 || (echo "{{trivyError}}"; exit 1)
+    trivy image {{namespace}}/{{CONTAINER}}:{{version}} --output {{reports}}/{{CONTAINER}}-scan.log 
 
 # Publish a docker container to the registry
 [group("Publish")]
