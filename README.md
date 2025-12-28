@@ -11,6 +11,46 @@ A standard DotMH Dev Containers templates build on custom Docker Images, for use
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge&)](https://opensource.org/licenses/Apache-2.0)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=for-the-badge&)](code_of_conduct.md)
 
+# Getting Started
+
+In your project you can install the template with [Devcontainer CLI](https://containers.dev/supporting#devcontainer-cli)
+
+
+```bash
+devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/<TEMPLATE> -a '{"baseContainer":"<CONTAINER>"}'
+```
+
+for example for Rust you can do 
+
+```bash
+devcontainer templates apply -w . -t ghcr.io/dotmh/devcontainer/rust -a '{"baseContainer":"devcontainer-rust"}'
+```
+You can read me on using with other tools that support devcontainers that include 
+[Vscode](https://code.visualstudio.com/docs/devcontainers/create-dev-container), 
+[Github Codespaces](https://github.com/features/codespaces), 
+[Jetbrains IDE](https://www.jetbrains.com/help/idea/connect-to-devcontainer.html) 
+and more here <https://containers.dev/supporting>
+
+## Available DotMH Devcontainers
+
+Click on the icon below to jump to the readme for that devcontainer
+
+### Production
+
+[![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](devcontainers/node/README.md)
+[![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](devcontainers/csharp/README.md)
+
+You can also create a devcontainer with no language specific tooling, just the [base](devcontainers/base/README.md) and [cloud](devcontainers/cloud/README.md) tools.
+
+### Experimental
+
+[![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)](devcontainers/rust/README.md)
+
+### Deprecated
+
+[![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)](devcontainers/go/README.md)
+[![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)](devcontainers/kotlin/README.md)
+
 # Docker Containers
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -119,13 +159,3 @@ For use when developing applications on Rust, can be built on top of any base
 - [Rustup](https://rust-lang.org/tools/install/)
     - [RustC](https://doc.rust-lang.org/rustc/index.html)
     - [Cargo](https://doc.rust-lang.org/cargo/index.html)
-
-# Devcontainer Templates
-
-- [Base](devcontainers/base/README.md)
-- [Cloud](devcontainers/cloud/README.md)
-- [Node](devcontainers/node/README.md)
-- [Go](devcontainers/go/README.md)
-- [Kotlin](devcontainers/kotlin/README.md)
-- [C#](devcontainers/csharp/README.md)
-- [Rust](devcontainers/rust/README.md)
