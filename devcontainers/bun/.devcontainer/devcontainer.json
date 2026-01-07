@@ -1,0 +1,21 @@
+{
+    "name": "DotMH Node",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "oven.bun-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "formulahendry.auto-rename-tag",
+                "nefrob.vscode-just-syntax",
+                "hashicorp.terraform",
+                "mattpocock.ts-error-translator",
+                "github.vscode-github-actions",
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    }
+}
