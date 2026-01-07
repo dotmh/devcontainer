@@ -82,6 +82,8 @@ jobs:
               container: dotnet
             - file: Rust.Dockerfile
               container: rust
+            - file: Bun.Dockerfile
+              container: bun
           base:
             - devcontainer
             - devcontainer-cloud
