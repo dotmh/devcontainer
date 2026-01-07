@@ -39,6 +39,7 @@ Click on the icon below to jump to the readme for that devcontainer
 
 [![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](devcontainers/node/README.md)
 [![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](devcontainers/csharp/README.md)
+[![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)](devcontainers/bun/README.md)
 
 You can also create a devcontainer with no language specific tooling, just the [base](devcontainers/base/README.md) and [cloud](devcontainers/cloud/README.md) tools.
 
@@ -159,3 +160,13 @@ For use when developing applications on Rust, can be built on top of any base
 - [Rustup](https://rust-lang.org/tools/install/)
     - [RustC](https://doc.rust-lang.org/rustc/index.html)
     - [Cargo](https://doc.rust-lang.org/cargo/index.html)
+
+## Bun
+
+![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)
+
+For use when developing applications on Bun, can be built on top of any base
+
+### Tools
+
+- [Bun](https://bun.sh/)

@@ -1,0 +1,23 @@
+{
+  "id": "bun",
+  "name": "DotMH Bun Dev Container",
+  "version": "13.0.0",
+  "publisher": "DotMH <oss+devcontainer@dotmh.io>",
+  "description": "The Bun dev container for developing with Bun",
+  "licenseURL": "https://github.com/dotmh/devcontainer/blob/main/LICENSE",
+  "documentationURL": "https://github.com/dotmh/devcontainer/blob/main/devcontainers/bun/README.md",
+  "options": {
+    "baseContainer": {
+      "type": "string",
+      "description": "Which base image to use",
+      "proposals": [
+        "devcontainer-bun",
+        "devcontainer-cloud-bun",
+        "devcontainer-rocky-bun",
+        "devcontainer-rocky-cloud-bun"
+      ],
+      "default": "devcontainer-bun"
+    }
+  },
+  "platforms": ["Any"]
+}
